@@ -34,11 +34,15 @@ The objective of this SOC automation project is to enhance the efficiency and ef
 - Configuring automated email notifications to inform SOC analysts about detected incidents promptly.
 
 ### Tools Used
-[Bullet Points - Remove this afterwards]
 
-- Security Information and Event Management (SIEM) system for log ingestion and analysis.
-- Network analysis tools (such as Wireshark) for capturing and examining network traffic.
-- Telemetry generation tools to create realistic network traffic and attack scenarios.
+- A comprehensive open-source security monitoring tool (Such as Wazuh Manager) that provides threat detection, integrity     checking,      incidence response, and compliance management.
+- An incident response platform designed to efficiently manage and investigate security events (Such as TheHive), integrated with Wazuh     to handle alerts and incidents.
+- A post-exploitation tool (such as Mimikatz) used to test the detection capabilities of the SOC setup by simulating an attack that       
+  attempts to extract credentials from the Windows 10 machine.
+- A Security Orchestration, Automation, and Response (SOAR) platform (such as Shuffle) that automates workflows and integrates with Wazuh   Manager and TheHive to manage and respond to security incidents efficiently.
+- The operating system (Ubuntu 22.04) used for setting up the cloud-based Wazuh Manager and TheHive servers, providing a secure and 
+  stable environment for hosting these applications.
+- A Windows system service and device driver (Sysmon) that logs system activity to the Windows event log, providing detailed information    on process creations, network connections, and file changes.
 
 ## Steps
 drag & drop screenshots here or use imgur and reference them using imgsrc
