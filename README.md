@@ -46,6 +46,6 @@ The objective of this SOC automation project is to enhance the efficiency and ef
 
 ## Steps
 
-The first step in this project was the drawing of the project diagram using https://www.drawio.com/
+The first step in this project was the drawing of the project diagram using
 https://app.diagrams.net/?src=about#Hviponpoint%2FSOC-Automation-Project%2Fmain%2FUntitled%20Diagram.drawio#%7B%22pageId%22%3A%22AONNASwHGbtUYUmjS9xI%22%7D
 
