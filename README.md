@@ -95,4 +95,11 @@ The objective of this SOC automation project is to enhance the efficiency and ef
     sudo apt-get update
     sudo apt-get install -y thehive
 
-9.
+9.  Configuration of TheHive so it can work smoothly and successfully. Start this by editing Cassandra configuration files through   
+    nano/etc/cassandra/cassandra.yaml  ..Change the listen_address, the rpc_address and the seed_provider address to TheHive public IP 
+    address. Then stop and start the service... systemctl start cassandra.service
+    The next is the set up of Elasticsearch by editing it conf files through nano/etc/elasticsearch/elasticsearch.yml  ..I changed the   
+    cluster.name to TheHive, the node.name to node-1, network host IP address changed to TheHive IP address, and the 
+    cluster.initial_master_nodes to node-1 ...systemctl start elasticsearch , and then systemctl enable elasticsearch.
+
+    The next is to set up TheHive by editing it configuration file through nano/etc/thehive/application.conf  ..
