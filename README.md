@@ -46,10 +46,53 @@ The objective of this SOC automation project is to enhance the efficiency and ef
 
 ## Steps
 
-The first step in this project was the drawing of the project diagram using
-https://app.diagrams.net/?src=about#Hviponpoint%2FSOC-Automation-Project%2Fmain%2FUntitled%20Diagram.drawio#%7B%22pageId%22%3A%22AONNASwHGbtUYUmjS9xI%22%7D
+1.  The first step in this project was the drawing of the project diagram using
+    https://app.diagrams.net/?src=about#Hviponpoint%2FSOC-Automation- Project%2Fmain%2FUntitled%20Diagram.drawio#%7B%22pageId%22%3A%22AONNASwHGbtUYUmjS9xI%22%7D
 
-Diagram
 ![Screenshot 2024-05-24 150250](https://github.com/viponpoint/SOC-Automation-Project/blob/main/Screenshot%202024-05-24%20150250.png)
 
+2.  Download and install the virtual box in preparation for the creation of virtual machine to enable me to set up my Windows 10 client.
+3.  Download the ISO file image for Windows 10 machine and then install it by following the installation and configuration process.
+4.  Download Sysmon from https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon and then install it on Windows 10 client             machine. Also, you need to download the Sysmon configuration file (sysmonconfig.xml) from
+    https://github.com/olafhartong/sysmon-modular and save it on your Windows 10 machine. Then install the configuration file.
+5.  The set up of Wazuh manager using Digital Ocean (https://digitalocean.com/) as my cloud provider. Started with the creation of Wazuh      server. End up creating two servers on Digital Ocean, one for my Wazuh Ubuntu server and the other for TheHive Ubuntu server.
+6.  Create firewall immediately so as not to get spammed by external scanners. Set your firewall Inbound Rules to such a way that only        your public IP can access it for now. Connect the firewall to both the Wazuh and TheHive machines.
+7.  Installation of Wazuh through the Terminal. You can SSH into the Wazuh machine using Putty, and when in, you should apt-get update   
+    and apt-get upgrade -y Wazuh. Then install Wazuh with the following commands curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh 
+    && sudo bash ./wazuh-install.sh -a   
+8.  Installation of TheHive through the Terminal. You can SSH into TheHive machine using Putty, and when in, then you start the   
+    installations. Before the installation of TheHive, you will have to install 3 difference prerequisite before TheHive installation. 
+    First is Jave, Second is Cassandra, and third is ElasticSearch, and then TheHive installation comes in. Below are the installation        code:
+    Install Java
+    wget -qO- https://apt.corretto.aws/corretto.key | sudo gpg --dearmor  -o /usr/share/keyrings/corretto.gpg
+    echo "deb [signed-by=/usr/share/keyrings/corretto.gpg] https://apt.corretto.aws stable main" |  sudo tee -a           
+    /etc/apt/sources.list.d/corretto.sources.list
+    sudo apt update
+    sudo apt install java-common java-11-amazon-corretto-jdk
+    echo JAVA_HOME="/usr/lib/jvm/java-11-amazon-corretto" | sudo tee -a /etc/environment 
+    export JAVA_HOME="/usr/lib/jvm/java-11-amazon-corretto"
+    
+    Install Cassandra
+    wget -qO -  https://downloads.apache.org/cassandra/KEYS | sudo gpg --dearmor  -o /usr/share/keyrings/cassandra-archive.gpg
+    echo "deb [signed-by=/usr/share/keyrings/cassandra-archive.gpg] https://debian.cassandra.apache.org 40x main" |  sudo tee -a     
+    /etc/apt/sources.list.d/cassandra.sources.list
+    sudo apt update
+    sudo apt install cassandra
 
+    Install ElasticSearch
+    wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch |  sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
+    sudo apt-get install apt-transport-https
+    echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main" |  
+    sudo tee /etc/apt/sources.list.d/elastic-7.x.list
+    sudo apt update
+    sudo apt install elasticsearch
+
+    Install TheHive
+    wget -O- https://archives.strangebee.com/keys/strangebee.gpg | sudo gpg --dearmor -o /usr/share/keyrings/strangebee-archive-  
+    keyring.gpg
+    echo 'deb [signed-by=/usr/share/keyrings/strangebee-archive-keyring.gpg] https://deb.strangebee.com thehive-5.2 main' | sudo tee -a 
+    /etc/apt/sources.list.d/strangebee.list
+    sudo apt-get update
+    sudo apt-get install -y thehive
+
+9.
