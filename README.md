@@ -8,11 +8,11 @@ Wazuh Manager serves as a robust, open-source security monitoring platform that 
 
 To simulate a real-world scenario, the Windows 10 machine will be subjected to a Mimikatz attack, a well-known tool used for extracting credentials from Windows systems. The Wazuh agent will detect this attack and report it to the Wazuh Manager. This setup will provide a realistic scenario to test and demonstrate the SOC's automated capabilities in handling real-world cyber threats.
 
-Integrating Shuffle, a powerful Security Orchestration, Automation, and Response (SOAR) platform, enhances the SOC's automation capabilities. We registered an accound with Shuffle at https://shuffler.io/ and connected to both Wazuh Manager and TheHive, facilitating seamless data flow and incident management. When the Mimikatz attack is detected, Shuffle will orchestrate the response by sending an alert to TheHive, an incident response platform designed to efficiently manage and investigate security events.
+Integrating Shuffle, a powerful Security Orchestration, Automation, and Response (SOAR) platform, enhances the SOC's automation capabilities. I registered an account with Shuffle at https://shuffler.io/ and connected to both Wazuh Manager and TheHive, facilitating seamless data flow and incident management. When the Mimikatz attack is detected, Shuffle will orchestrate the response by sending an alert to TheHive, an incident response platform designed to efficiently manage and investigate security events.
 
 Furthermore, Shuffle will automatically send an email notification about the Mimikatz attack to the SOC analyst. This real-time alert ensures that the SOC team is promptly informed, enabling them to take swift and appropriate action.
 
-Through this project, we aim to highlight the benefits of SOC automation, such as accelerated incident response, enhanced detection accuracy, and optimized resource utilization. By leveraging various security operations and the synergy between Wazuh Manager, TheHive, and Shuffle, organizations can significantly strengthen their cybersecurity defenses, can better protect their assets  and maintain a resilient security posture in the face of evolving cyber threats. 
+Through this project, my aim was to highlight the benefits of SOC automation, such as accelerated incident response, enhanced detection accuracy, and optimized resource utilization. By leveraging various security operations and the synergy between Wazuh Manager, TheHive, and Shuffle, organizations can significantly strengthen their cybersecurity defenses, can better protect their assets  and maintain a resilient security posture in the face of evolving cyber threats. 
 
 
 ## Objective
@@ -45,11 +45,7 @@ The objective of this SOC automation project is to enhance the efficiency and ef
 - A Windows system service and device driver (Sysmon) that logs system activity to the Windows event log, providing detailed information    on process creations, network connections, and file changes.
 
 ## Steps
-drag & drop screenshots here or use imgur and reference them using imgsrc
 
-Every screenshot should have some text explaining what the screenshot is about.
+The first step in this project was the drawing of the project diagram using https://www.drawio.com/
+https://app.diagrams.net/?src=about#Hviponpoint%2FSOC-Automation-Project%2Fmain%2FUntitled%20Diagram.drawio#%7B%22pageId%22%3A%22AONNASwHGbtUYUmjS9xI%22%7D
 
-Example below.
-
-*Ref 1: Network Diagram*
--->
