@@ -16,18 +16,22 @@ Through this project, we aim to highlight the benefits of SOC automation, such a
 
 
 ## Objective
-[Brief Objective - Remove this afterwards]
 
-The Detection Lab project aimed to establish a controlled environment for simulating and detecting cyber attacks. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen understanding of network security, attack patterns, and defensive strategies.
+The objective of this SOC automation project is to enhance the efficiency and effectiveness of security operations by integrating advanced tools and automating incident response. The project involves setting up Wazuh Manager and TheHive servers in the cloud on Ubuntu 22.04, alongside installing a Wazuh agent and Sysmon on Windows 10 client machine which was configured on virtual box. The Wazuh agent reports security events to the cloud-based Wazuh Manager. To demonstrate the system's capabilities, a Mimikatz attack will be executed on the Windows 10 machine. Shuffle, our SOAR platform, will be registered and connected to Wazuh Manager and TheHive. Upon detecting the attack, Shuffle will send an alert to TheHive and automatically email the SOC analyst, ensuring prompt awareness and response. This setup aims to showcase the power of automation in improving incident response times, accuracy, and overall security posture.
 
 ### Skills Learned
-[Bullet Points - Remove this afterwards]
 
-- Advanced understanding of SIEM concepts and practical application.
-- Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
+- Applying real-world cybersecurity practices and tools to protect an organization’s digital assets.
+- Gaining practical experience in setting up and managing a SOC environment.
+- Ensuring seamless integration and communication between various security tools and platforms.
+- Configuration of Shuffle as a SOAR platform and connecting it with Wazuh Manager and TheHive.
+- Installing and configuring Wazuh Manager for centralized security monitoring.
+- Integrating Sysmon to provide detailed event logging and monitoring capabilities.
+- Setting up the Wazuh agent on a Windows 10 client machine to report security events.
+- Configuring Wazuh to detect and alert on suspicious activities and potential breaches.
+- Simulating a Mimikatz attack on a Windows 10 machine to test the security setup.
+- Automating incident response workflows to enhance efficiency and reduce response times.
+- Configuring automated email notifications to inform SOC analysts about detected incidents promptly.
 
 ### Tools Used
 [Bullet Points - Remove this afterwards]
