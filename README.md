@@ -102,4 +102,24 @@ The objective of this SOC automation project is to enhance the efficiency and ef
     cluster.name to TheHive, the node.name to node-1, network host IP address changed to TheHive IP address, and the 
     cluster.initial_master_nodes to node-1 ...systemctl start elasticsearch , and then systemctl enable elasticsearch.
 
-    The next is to set up TheHive by editing it configuration file through nano/etc/thehive/application.conf  ..
+    The next is to set up TheHive by editing it configuration file through nano/etc/thehive/application.conf  .. But before that, ensure that TheHive user and group have access to /opt/thp file part.
+    Type chown -R thehive:thehive /opt/thp
+    The above will change owner to thehive user and group. To configure TheHive configuration file, type
+    nano/etc/thehive/application.conf
+    Change the hostname to the public IP of TheHive
+    Change the Cluster-name = to the same name to changed it to previously
+    Change application.baseUrl to the public IP of TheHive
+    Save the above and then
+    systemctl start thehive
+    systemctl enable thehive
+
+    That is the end of the configuration of TheHive
+    You can then access TheHive dashboard with the IP of TheHive on port 9000. With the username: admin@thehive.local and the password: secret
+
+10. Configuration of Wazuh. This will be done from Wazuh dashboard. We will Add Agent. Click on Add Agent and follow the steps.
+    Copy the command from : Run the following commands to download and install the Wazuh agent
+    Go to our Windows machine and open up Powershell, with administrative priviledges and then paste the copied command and press enter.
+    You start the services by typing net start wazuhsvc
+    Wazuh has been configured successfully.
+
+11. Generation of telemetry containing Mimikatz from our Windows 10 machine and ensure it is being injected into Wazuh.  
