@@ -122,4 +122,7 @@ The objective of this SOC automation project is to enhance the efficiency and ef
     You start the services by typing net start wazuhsvc
     Wazuh has been configured successfully.
 
-11. Generation of telemetry containing Mimikatz from our Windows 10 machine and ensure it is being injected into Wazuh.  
+11. Generation of telemetry containing Mimikatz from my Windows 10 machine and ensure it is being injected into Wazuh. Edit the Ossec.conf file on the Windows 10 machine to allow sysmon to inject/forward      events into Wazuh.
+12. Download Mimikatz into the Windows 10 machine. But before doing that, disable Windows defender on the Windows 10 machine so as to allow the download of Mimikatz.
+13. Run Mimikatz on the Windows 10 machine so as to generate the needed telemetry.
+14. Wazuh manager will detect Mimikatz immediately.
