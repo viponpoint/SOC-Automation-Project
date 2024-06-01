@@ -137,3 +137,6 @@ The objective of this SOC automation project is to enhance the efficiency and ef
 
 ![TheHive Status Active](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveStatusActive.png)
 
+![Wazuh Disc Mimikatz](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhDiscMimikatz.png)
+
+![Wazuh Mimikatz Name Change](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhMimikatzNameChange.png)
