@@ -126,3 +126,5 @@ The objective of this SOC automation project is to enhance the efficiency and ef
 12. Download Mimikatz into the Windows 10 machine. But before doing that, disable Windows defender on the Windows 10 machine so as to allow the download of Mimikatz.
 13. Run Mimikatz on the Windows 10 machine so as to generate the needed telemetry.
 14. Wazuh manager will detect Mimikatz immediately.
+15. You can also configure your own custom rule for originalFileName. The essence of this is, if an attacker decided to change the file name, let say, Mimikatz.exe to youaregreat.exe, the alert will still     be triggered in Wazuh manager.
+16. 
