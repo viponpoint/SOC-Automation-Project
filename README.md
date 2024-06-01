@@ -53,10 +53,13 @@ The objective of this SOC automation project is to enhance the efficiency and ef
 
 2.  Download and install the virtual box in preparation for the creation of virtual machine to enable me to set up my Windows 10 client.
 3.  Download the ISO file image for Windows 10 machine and then install it by following the installation and configuration process.
-4.  Download Sysmon from https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon and then install it on Windows 10 client             machine. Also, you need to download the Sysmon configuration file (sysmonconfig.xml) from
+4.  Download Sysmon from https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon and then install it on Windows 10 client machine. Also, you need to download the Sysmon   
+    configuration file (sysmonconfig.xml) from
     https://github.com/olafhartong/sysmon-modular and save it on your Windows 10 machine. Then install the configuration file.
-5.  The set up of Wazuh manager using Digital Ocean (https://digitalocean.com/) as my cloud provider. Started with the creation of Wazuh      server. End up creating two servers on Digital Ocean, one for my Wazuh Ubuntu server and the other for TheHive Ubuntu server.
-6.  Create firewall immediately so as not to get spammed by external scanners. Set your firewall Inbound Rules to such a way that only        your public IP can access it for now. Connect the firewall to both the Wazuh and TheHive machines.
+5.  The set up of Wazuh manager using Digital Ocean (https://digitalocean.com/) as my cloud provider. Started with the creation of Wazuh server. End up creating two servers on 
+    Digital Ocean, one for my Wazuh Ubuntu server and the other for TheHive Ubuntu server.
+6.  Create firewall immediately so as not to get spammed by external scanners. Set your firewall Inbound Rules to such a way that only your public IP can access it for now. Connect the 
+    firewall to both the Wazuh and TheHive machines.
 7.  Installation of Wazuh through the Terminal. You can SSH into the Wazuh machine using Putty, and when in, you should apt-get update   
     and apt-get upgrade -y Wazuh. Then install Wazuh with the following commands curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh 
     && sudo bash ./wazuh-install.sh -a   
@@ -122,21 +125,26 @@ The objective of this SOC automation project is to enhance the efficiency and ef
     You start the services by typing net start wazuhsvc
     Wazuh has been configured successfully.
 
-11. Generation of telemetry containing Mimikatz from my Windows 10 machine and ensure it is being injected into Wazuh. Edit the Ossec.conf file on the Windows 10 machine to allow sysmon to inject/forward      events into Wazuh.
+11. Generation of telemetry containing Mimikatz from my Windows 10 machine and ensure it is being injected into Wazuh. Edit the Ossec.conf file on the Windows 10 machine to allow sysmon 
+    to inject/forward events into Wazuh.
 12. Download Mimikatz into the Windows 10 machine. But before doing that, disable Windows defender on the Windows 10 machine so as to allow the download of Mimikatz.
 13. Run Mimikatz on the Windows 10 machine so as to generate the needed telemetry.
 14. Wazuh manager will detect Mimikatz immediately.
-15. You can also configure your own custom rule for originalFileName. The essence of this is, if an attacker decided to change the file name, let say, Mimikatz.exe to youaregreat.exe in order to evade         detection, the alert will still be triggered and attack detected by Wazuh manager.
+15. You can also configure your own custom rule for originalFileName. The essence of this is, if an attacker decided to change the file name, let say, Mimikatz.exe to youaregreat.exe in 
+    order to evade detection, the alert will still be triggered and attack detected by Wazuh manager.
 16. Create an account in Shuffle at https://shuffler.io/
-17. Create a new workflow in Shuffle and give it a name. Insert the webhook from the interface and then start the configuration of Wazuh to communicate with Shuffle from the Wazuh manager CLI.
+17. Create a new workflow in Shuffle and give it a name. Insert the webhook from the interface and then start the configuration of Wazuh to communicate with Shuffle from the Wazuh 
+    manager CLI.
 18. Go to the Windows 10 client machine and regenerate Mimikatz telemetry. Return to Shuffle interface and you will see the generated telemetry in Shuffle.
-19. The workflow built on Shuffle in this project start with Mimikatz Alert being sent to Shuffle, then Shuffle receives Mimikatz Alert and extract SHA256 Hash from the file, and then preceed to check 
+19. The workflow built on Shuffle in this project start with Mimikatz Alert being sent to Shuffle, then Shuffle receives Mimikatz Alert and extract SHA256 Hash from the file, and then 
+    preceed to check 
     the reputation score of the Hash with VirusTotal. Then send the details to TheHive to create an Alert and as well send email to the SOC analyst to begin Investigation.
 20. Pass the Hash value for the file by writing Regex then send it to VirusTotal to check the reputation score.
 
 
 ![TheHive Status Active](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveStatusActive.png)
-              Elasticsearch, Cassandra and TheHive are all running perfectly on my Wazuh manager
+              Elasticsearch, Cassandra and TheHive are all running perfectly on my Ubuntu machine
+              
 
 ![Wazuh Installation](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhInstallation.png)
 
