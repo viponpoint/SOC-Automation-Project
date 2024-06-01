@@ -144,69 +144,69 @@ The objective of this SOC automation project is to enhance the efficiency and ef
 
 ![Screen shot](https://github.com/viponpoint/SOC-Automation-Project/blob/main/Screenshot%20(78).png)
 This is the set up of Wazuh manager using Digital Ocean as the cloud provider
-
+#
 
 ![Wazuh Installation](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhInstallation.png)
                             The is the installation of Wazuh from CLI
                             
-
+#
 ![TheHive Installation](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveInstallation.png)
             This is the installation of Cassandra, Elasticsearch, and TheHive
-            
+ #           
             
 ![TheHive Configuration](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveConfiguration.png)
         This is the configuration of Cassandra, Elasticsearch, and TheHive
 
-
+#
 ![TheHive Conf2](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveConf2.png)
 
-
+#
 ![TheHive Status Active](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveStatusActive.png)
               Elasticsearch, Cassandra and TheHive are all running perfectly on my Ubuntu machine
             
-              
+ #             
 ![Wazuh Client Add To Manager](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhClientAddToManager.png)
 Wazuh client which is my Windows 10 machine is added to the Wazuh manager in the cloud as shown above
 
-
+#
 ![Mimikatz Original Name1](https://github.com/viponpoint/SOC-Automation-Project/blob/main/MimikatzOriginalName1.jpeg)
 I ran Mimikatz with the original name on Windows 10 machine so as to generate the needed telemetry
 
-
+#
 ![Mimikatz detected](https://github.com/viponpoint/SOC-Automation-Project/blob/main/Mimikatz%20detected.png)
 
-
+#
 ![Wazuh Disc Mimikatz](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhDiscMimikatz.png)
 Mimikatz is detected immediately as shown in the Wazuh dashboard with all the necessary info 
 
-
+#
 ![Original File Name Rule](https://github.com/viponpoint/SOC-Automation-Project/blob/main/OriginalFileNameRule.png)
 Customized Wazuh rule to detect mimikatz.exe with the OriginalFileName even if the name is changed to something else
 
-
+#
 ![Mimikatz Changed Name](https://github.com/viponpoint/SOC-Automation-Project/blob/main/MimikatzChangedName.jpeg)
 I ran Mimikatz with the changed name on Windows 10 machine so as to generate the needed telemetry
-
+#
 
 ![Wazuh Mimikatz Name Change](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhMimikatzNameChange.png)
 Even when the name of the file was changed, Wazuh was still able to detect Mimikatz because I customized the rules to the OriginalFileName
 
-
+#
 ![TheHive Detected Mimikatz1](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveDetectedMimikatz1.png)
 TheHive also detected Mimikatz
-
+#
 ![TheHive Detected Mimikatz](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveDetectedMimikatz.png)
 TheHive detected Mimikatz
-
+#
 ![ShuffleWorkFlow](https://github.com/viponpoint/SOC-Automation-Project/blob/main/ShuffleWorkFlow.png)
 This is my Shuffle work flow
 
 
-
+#
 ![Email Sent to Analyst](https://github.com/viponpoint/SOC-Automation-Project/blob/main/EmailSenttoAnalyst.png)
 Email sent to SOC Analyst from Shuffle
 
-
+#
 ![SOC Analyst Email](https://github.com/viponpoint/SOC-Automation-Project/blob/main/SOCAnalystEmail.png)
 SOC analyst received an email with the topic Mimikatz Detected!
 
