@@ -180,26 +180,35 @@ I ran Mimikatz with the original name on Windows 10 machine so as to generate th
 Mimikatz is detected immediately as shown in the Wazuh dashboard with all the necessary info 
 
 
+![Original File Name Rule](https://github.com/viponpoint/SOC-Automation-Project/blob/main/OriginalFileNameRule.png)
+Customized Wazuh rule to detect mimikatz.exe with the OriginalFileName even if the name is changed to something else
+
+
 ![Mimikatz Changed Name](https://github.com/viponpoint/SOC-Automation-Project/blob/main/MimikatzChangedName.jpeg)
 I ran Mimikatz with the changed name on Windows 10 machine so as to generate the needed telemetry
 
 
 ![Wazuh Mimikatz Name Change](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhMimikatzNameChange.png)
-Even when the name of the file was changed, Wazuh was still able to detect Mimikatz because I customized the rules to the OriginalName
+Even when the name of the file was changed, Wazuh was still able to detect Mimikatz because I customized the rules to the OriginalFileName
 
 
 ![TheHive Detected Mimikatz1](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveDetectedMimikatz1.png)
+TheHive also detected Mimikatz
 
 ![TheHive Detected Mimikatz](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveDetectedMimikatz.png)
+TheHive detected Mimikatz
 
 ![ShuffleWorkFlow](https://github.com/viponpoint/SOC-Automation-Project/blob/main/ShuffleWorkFlow.png)
+This is my Shuffle work flow
 
-![Mimikatz Original Name1](https://github.com/viponpoint/SOC-Automation-Project/blob/main/MimikatzOriginalName1.jpeg)
 
-![Mimikatz Changed Name](https://github.com/viponpoint/SOC-Automation-Project/blob/main/MimikatzChangedName.jpeg)
 
 ![Email Sent to Analyst](https://github.com/viponpoint/SOC-Automation-Project/blob/main/EmailSenttoAnalyst.png)
+Email sent to SOC Analyst from Shuffle
+
 
 ![SOC Analyst Email](https://github.com/viponpoint/SOC-Automation-Project/blob/main/SOCAnalystEmail.png)
+SOC analyst received an email with the topic Mimikatz Detected!
+
 
 ![Mimikatz detected](https://github.com/viponpoint/SOC-Automation-Project/blob/main/Mimikatz%20detected.png)
