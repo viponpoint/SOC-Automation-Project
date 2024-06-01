@@ -142,11 +142,32 @@ The objective of this SOC automation project is to enhance the efficiency and ef
 20. Pass the Hash value for the file by writing Regex then send it to VirusTotal to check the reputation score.
 
 
-![TheHive Status Active](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveStatusActive.png)
-              Elasticsearch, Cassandra and TheHive are all running perfectly on my Ubuntu machine
-              
+![Screen shot](https://github.com/viponpoint/SOC-Automation-Project/blob/main/Screenshot%20(78).png)
+This is the set up of Wazuh manager using Digital Ocean as the cloud provider
+
 
 ![Wazuh Installation](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhInstallation.png)
+                            The is the installation of Wazuh from CLI
+                            
+
+![TheHive Installation](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveInstallation.png)
+            This is the installation of Cassandra, Elasticsearch, and TheHive
+            
+            
+![TheHive Configuration](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveConfiguration.png)
+        This is the configuration of Cassandra, Elasticsearch, and TheHive
+
+
+![TheHive Conf2](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveConf2.png)
+
+
+![TheHive Status Active](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveStatusActive.png)
+              Elasticsearch, Cassandra and TheHive are all running perfectly on my Ubuntu machine
+            
+              
+![Wazuh Client Add To Manager](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhClientAddToManager.png)
+Wazuh client which is my Windows 10 machine is added to the Wazuh manager in the cloud as shown above
+
 
 ![Mimikatz detected](https://github.com/viponpoint/SOC-Automation-Project/blob/main/Mimikatz%20detected.png)
 
