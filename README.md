@@ -126,5 +126,10 @@ The objective of this SOC automation project is to enhance the efficiency and ef
 12. Download Mimikatz into the Windows 10 machine. But before doing that, disable Windows defender on the Windows 10 machine so as to allow the download of Mimikatz.
 13. Run Mimikatz on the Windows 10 machine so as to generate the needed telemetry.
 14. Wazuh manager will detect Mimikatz immediately.
-15. You can also configure your own custom rule for originalFileName. The essence of this is, if an attacker decided to change the file name, let say, Mimikatz.exe to youaregreat.exe, the alert will still     be triggered in Wazuh manager.
-16. 
+15. You can also configure your own custom rule for originalFileName. The essence of this is, if an attacker decided to change the file name, let say, Mimikatz.exe to youaregreat.exe in order to evade         detection, the alert will still be triggered and attack detected by Wazuh manager.
+16. Create an account in Shuffle at https://shuffler.io/
+17. Create a new workflow in Shuffle and give it a name. Insert the webhook from the interface and then start the configuration of Wazuh to communicate with Shuffle from the Wazuh manager CLI.
+18. Go to the Windows 10 client machine and regenerate Mimikatz telemetry. Return to Shuffle interface and you will see the generated telemetry in Shuffle.
+19. The workflow built on Shuffle in this project start with Mimikatz Alert being sent to Shuffle, then Shuffle receives Mimikatz Alert and extract SHA256 Hash from the file, and then preceed to check 
+    the reputation score of the Hash with VirusTotal. Then send the details to TheHive to create an Alert and as well send email to the SOC analyst to begin Investigation.
+20. Pass the Hash value for the file by writing Regex
