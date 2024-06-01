@@ -137,6 +137,24 @@ The objective of this SOC automation project is to enhance the efficiency and ef
 
 ![TheHive Status Active](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveStatusActive.png)
 
+![Wazuh Installation](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhInstallation.png)
+
 ![Wazuh Disc Mimikatz](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhDiscMimikatz.png)
 
 ![Wazuh Mimikatz Name Change](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhMimikatzNameChange.png)
+
+![TheHive Detected Mimikatz1](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveDetectedMimikatz1.png)
+
+![TheHive Detected Mimikatz](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveDetectedMimikatz.png)
+
+![ShuffleWorkFlow](https://github.com/viponpoint/SOC-Automation-Project/blob/main/ShuffleWorkFlow.png)
+
+![Mimikatz Original Name1](https://github.com/viponpoint/SOC-Automation-Project/blob/main/MimikatzOriginalName1.jpeg)
+
+![Mimikatz Changed Name](https://github.com/viponpoint/SOC-Automation-Project/blob/main/MimikatzChangedName.jpeg)
+
+![Email Sent to Analyst](https://github.com/viponpoint/SOC-Automation-Project/blob/main/EmailSenttoAnalyst.png)
+
+![SOC Analyst Email](https://github.com/viponpoint/SOC-Automation-Project/blob/main/SOCAnalystEmail.png)
+
+![Mimikatz detected](https://github.com/viponpoint/SOC-Automation-Project/blob/main/Mimikatz%20detected.png)
