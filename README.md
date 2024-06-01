@@ -132,4 +132,4 @@ The objective of this SOC automation project is to enhance the efficiency and ef
 18. Go to the Windows 10 client machine and regenerate Mimikatz telemetry. Return to Shuffle interface and you will see the generated telemetry in Shuffle.
 19. The workflow built on Shuffle in this project start with Mimikatz Alert being sent to Shuffle, then Shuffle receives Mimikatz Alert and extract SHA256 Hash from the file, and then preceed to check 
     the reputation score of the Hash with VirusTotal. Then send the details to TheHive to create an Alert and as well send email to the SOC analyst to begin Investigation.
-20. Pass the Hash value for the file by writing Regex
+20. Pass the Hash value for the file by writing Regex then send it to VirusTotal to check the reputation score.
