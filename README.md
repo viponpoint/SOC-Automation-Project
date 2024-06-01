@@ -136,6 +136,7 @@ The objective of this SOC automation project is to enhance the efficiency and ef
 
 
 ![TheHive Status Active](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveStatusActive.png)
+              Elasticsearch, Cassandra and TheHive are all running perfectly on my Wazuh manager
 
 ![Wazuh Installation](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhInstallation.png)
 
