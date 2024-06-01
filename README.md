@@ -169,11 +169,24 @@ This is the set up of Wazuh manager using Digital Ocean as the cloud provider
 Wazuh client which is my Windows 10 machine is added to the Wazuh manager in the cloud as shown above
 
 
+![Mimikatz Original Name1](https://github.com/viponpoint/SOC-Automation-Project/blob/main/MimikatzOriginalName1.jpeg)
+I ran Mimikatz with the original name on Windows 10 machine so as to generate the needed telemetry
+
+
 ![Mimikatz detected](https://github.com/viponpoint/SOC-Automation-Project/blob/main/Mimikatz%20detected.png)
 
+
 ![Wazuh Disc Mimikatz](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhDiscMimikatz.png)
+Mimikatz is detected immediately as shown in the Wazuh dashboard with all the necessary info 
+
+
+![Mimikatz Changed Name](https://github.com/viponpoint/SOC-Automation-Project/blob/main/MimikatzChangedName.jpeg)
+I ran Mimikatz with the changed name on Windows 10 machine so as to generate the needed telemetry
+
 
 ![Wazuh Mimikatz Name Change](https://github.com/viponpoint/SOC-Automation-Project/blob/main/WazuhMimikatzNameChange.png)
+Even when the name of the file was changed, Wazuh was still able to detect Mimikatz because I customized the rules to the OriginalName
+
 
 ![TheHive Detected Mimikatz1](https://github.com/viponpoint/SOC-Automation-Project/blob/main/TheHiveDetectedMimikatz1.png)
 
