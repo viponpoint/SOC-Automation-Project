@@ -210,5 +210,3 @@ Email sent to SOC Analyst from Shuffle
 ![SOC Analyst Email](https://github.com/viponpoint/SOC-Automation-Project/blob/main/SOCAnalystEmail.png)
 SOC analyst received an email with the topic Mimikatz Detected!
 
-
-![Mimikatz detected](https://github.com/viponpoint/SOC-Automation-Project/blob/main/Mimikatz%20detected.png)
