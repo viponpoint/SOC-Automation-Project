@@ -211,7 +211,7 @@ Email sent to SOC Analyst from Shuffle
 SOC analyst received an email with the topic Mimikatz Detected!
 
 
-# Key Achievements
+## Key Achievements
 
 In this project, I achieved a robust security monitoring setup with real-time event detection, automated response, and detailed case management, demonstrating the efficacy of SOC automation. I successfully simulated a Mimikatz attack on the Windows 10 client, which was detected by the Wazuh agent and reported to the Wazuh Manager. Successfully configured Shuffle to send an alert to TheHive and automatically email a SOC analyst upon detection of the Mimikatz attack, ensuring prompt incident awareness and response. Also, Successfully automated the creation of alerts in TheHive for case management, streamlining the incident handling workflow.
 These achievements highlight the successful implementation of an automated SOC environment capable of detecting, analyzing, and responding to security incidents efficiently. The project showcases necessary skills in deploying and configuring security tools, integrating automation platforms, and streamlining security operations, all crucial for maintaining a secure IT infrastructure.
